@@ -1,5 +1,6 @@
 .secao{
     display: grid;
+    align-items: center;
 }
 
 .secao-vertical{
@@ -10,3 +11,4 @@
 .secao-vertical .secao__cartoes{
     grid-column: 1/3;
 }
+

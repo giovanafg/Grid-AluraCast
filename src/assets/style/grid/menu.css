@@ -1,0 +1,9 @@
+.menu-lateral{
+    display: grid;
+    row-gap: 2rem;
+    grid-template-rows: repeat(3, auto) 1fr;
+}
+
+.menu-lateral__logo{
+    justify-self: center;
+}
