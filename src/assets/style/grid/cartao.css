@@ -11,6 +11,26 @@
     grid-row-end: 4;
 }
 
+.secao__cartoes{
+    display: grid;
+    row-gap: 1rem;
+    --gap-coluna: 1.25rem;
+    column-gap: var(--gap-coluna);
+    --gap-proporcional: var(--gap-coluna) * (var(--quantidade-maxima-de-colunas) - 1) / var(--quantidade-maxima-de-colunas);
+
+    /*Largura minima da coluna*/
+    --largura-minima-da-coluna: 100%/2 - var(--gap-proporcional);
+
+    /*Largura maxima da coluna*/
+    --max-largura-maxima-da-coluna: 100%/var(--quantidade-maxima-de-colunas);
+    --largura-maxima-da-coluna: max(var(--min-largura-maxima-da-coluna), var(--max-largura-maxima-da-coluna) - var(--gap-proporcional));
+
+    --minimo: min(var(--largura-minima-da-coluna), var(--largura-maxima-da-coluna));
+
+
+    grid-template-columns: repeat(auto-fit, minmax(var(--minimo), 1fr));  
+}
+
 .secao-horizontal .cartao__botao{
     grid-column: 3/4;
     grid-row: 1/4;
@@ -24,4 +44,9 @@
     grid-column: 2/3;
     grid-row: 1/2;
     
+}
+
+.secao-vertical .cartao{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
