@@ -7,3 +7,23 @@
 .menu-lateral__logo{
     justify-self: center;
 }
+
+@media only screen and (min-width: 360px) {
+    .menu-lateral{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1399px) {
+    .menu-lateral{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .menu-lateral{
+        display: block;
+    }
+}
+
+
